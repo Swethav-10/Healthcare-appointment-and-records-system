@@ -252,7 +252,7 @@ function openAppointmentForm() {
 /* ---------- Demo data ---------- */
 async function seedDemo() {
   const docs = [['Dr. Anita Rao', 'Cardiology', 'anita.rao@clinic.com'], ['Dr. Vikram Shah', 'Neurology', 'vikram.shah@clinic.com'], ['Dr. Meera Iyer', 'Pediatrics', 'meera.iyer@clinic.com']];
-  const pats = [['Swetha V', 'swetha@mail.com', '9876543210', 22], ['Arjun Kumar', 'arjun@mail.com', '9123456780', 34], ['Priya Nair', 'priya@mail.com', '9988776655', 8]];
+  const pats = [['Rahul Sharma', 'rahul.sharma@mail.com', '9876543210', 29], ['Arjun Kumar', 'arjun@mail.com', '9123456780', 34], ['Priya Nair', 'priya@mail.com', '9988776655', 8]];
   const D = [], P = [];
   for (const [name, specialization, email] of docs) D.push(await api('/doctors', 'POST', { name, specialization, email }));
   for (const [name, email, phone, age] of pats) P.push(await api('/patients', 'POST', { name, email, phone, age }));
