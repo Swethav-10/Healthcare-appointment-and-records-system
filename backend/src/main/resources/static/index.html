@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MediCare | Appointments &amp; Records</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="logo">+</span>
+        <div><b>MediCare</b><small>Appointments &amp; Records</small></div>
+      </div>
+      <nav id="nav">
+        <button class="nav active" data-view="dashboard" data-icon="grid">Dashboard</button>
+        <button class="nav" data-view="appointments" data-icon="calendar">Appointments</button>
+        <button class="nav" data-view="doctors" data-icon="doctor">Doctors</button>
+        <button class="nav" data-view="patients" data-icon="heart">Patients</button>
+      </nav>
+      <div class="side-foot"><span id="apiDot" class="dot"></span><span id="apiText">Connecting...</span></div>
+    </aside>
+
+    <main>
+      <header class="top">
+        <div>
+          <h1 id="title">Dashboard</h1>
+          <p id="subtitle" class="muted"></p>
+        </div>
+        <div class="actions">
+          <input id="search" type="search" placeholder="Search...">
+          <button id="addBtn" class="btn primary">+ New</button>
+        </div>
+      </header>
+      <section id="view"></section>
+    </main>
+  </div>
+
+  <div id="modal" class="modal hidden">
+    <div class="sheet">
+      <div class="sheet-head"><h2 id="mTitle"></h2><button class="x" id="mClose" type="button">&times;</button></div>
+      <form id="mForm"></form>
+    </div>
+  </div>
+  <div id="toast" class="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
